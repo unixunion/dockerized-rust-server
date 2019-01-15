@@ -1,16 +1,17 @@
-export LD_LIBRARY_PATH="./RustDedicated_Data/Plugins/x86_64"
-./RustDedicated -batchmode -nographics \
-  +server.ip 0.0.0.0\
+export LD_LIBRARY_PATH="/root/mounted/RustDedicated_Data:{$LD_LIBRARY_PATH}:$(pwd)"
+
+./RustDedicated -batchmode \
+  +server.ip 0.0.0.0 \
   +server.port 28015 \
-  +rcon.ip 0.0.0.0\
+  +rcon.ip 0.0.0.0 \
   +rcon.port 28016 \
-  +rcon.password "supersecurepassword" \
+  +rcon.password "supersecure" \
   +server.maxplayers 75 \
-  +server.hostname "My Rust Server" \
+  +server.hostname "my_rust" \
   +server.identity "my_rust" \
   +server.level "Procedural Map" \
-  +server.seed 8675309\
+  +server.seed 8675309 \
   +server.worldsize 3000 \
   +server.saveinterval 300 \-server.globalchat true \
   +server.description "my server" \
-  +server.url "http://blaa.com"
+  +server.url "http://my.com"

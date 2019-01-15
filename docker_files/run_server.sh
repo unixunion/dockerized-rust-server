@@ -10,22 +10,7 @@ then
 fi
 
 while true; do
-#  exec ./RustDedicated -batchmode -nographics \
-#  -server.ip 0.0.0.0\
-#  -server.port 28015 \
-#  -rcon.ip 0.0.0.0\
-#  -rcon.port 28016 \
-#  -rcon.password "d2DFss2" \
-#  -server.maxplayers 75 \
-#  -server.hostname "DawnSquad" \
-#  -server.identity "dawnsquad_rust" \
-#  -server.level "Procedural Map" \
-#  -server.seed 8675309\
-#  -server.worldsize 3000 \
-#  -server.saveinterval 300 \-server.globalchat true \
-#  -server.description "dawnsquad server" \
-#  -server.url "http://dawnsquad.com"
-#  -autoupdate
-  exec sh ./startserver.sh
+  ./startserver.sh
   echo "\nRestarting server...\n"
+  sleep 5
 done
