@@ -9,15 +9,23 @@ then
 	ln -s /etc/service/steamcmd/linux32/steamclient.so "$file"
 fi
 
-
-
-# Classic Casual
-# exec ./srcds_run -game csgo -console -usercon +game_type 0 +game_mode 0 +mapgroup mg_active
-# Classic Competitive
-exec ./srcds_run -game csgo -console -usercon +ip 0.0.0.0 +hostport 27015 +game_type 0 +game_mode 1 
-# Arms Race
-# exec ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 0 +mapgroup mg_armsrace
-# Demolition
-# exec ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 1 +mapgroup mg_demolition
-# Deathmatch
-# exec ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 2 +mapgroup mg_allclassic
+while true; do
+#  exec ./RustDedicated -batchmode -nographics \
+#  -server.ip 0.0.0.0\
+#  -server.port 28015 \
+#  -rcon.ip 0.0.0.0\
+#  -rcon.port 28016 \
+#  -rcon.password "d2DFss2" \
+#  -server.maxplayers 75 \
+#  -server.hostname "DawnSquad" \
+#  -server.identity "dawnsquad_rust" \
+#  -server.level "Procedural Map" \
+#  -server.seed 8675309\
+#  -server.worldsize 3000 \
+#  -server.saveinterval 300 \-server.globalchat true \
+#  -server.description "dawnsquad server" \
+#  -server.url "http://dawnsquad.com"
+#  -autoupdate
+  exec sh ./startserver.sh
+  echo "\nRestarting server...\n"
+done

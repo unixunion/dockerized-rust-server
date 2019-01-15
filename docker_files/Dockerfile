@@ -26,3 +26,5 @@ RUN       chmod +x ./run
 
 # Cleans up APT when done.
 RUN        apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ADD	   ./startserver.sh /root/mounted/startserver.sh
